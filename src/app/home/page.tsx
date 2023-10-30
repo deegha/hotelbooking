@@ -28,6 +28,8 @@ const popular = [
   },
 ]
 
+//this is a testing comment
+
 function Home() {
   return (
     <div className={styles.container}>
