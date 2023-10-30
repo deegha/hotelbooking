@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; max-width: 1000px;
+  gap: 66px;
+}
+
+.imageArea {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; max-width: 1000px;
+  gap: 20px;
+
+}
+
+
+.sectiontitle {
+color: #000;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+  
+}
