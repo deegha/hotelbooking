@@ -1,7 +1,12 @@
 'use client'
+import 'rsuite/dist/rsuite.min.css'
 
 import styles from './styles.module.scss'
-import { Button } from '..'
+import { DateRangePicker } from 'rsuite'
+import Button from 'rsuite/Button'
+import { InputNumber, AutoComplete } from 'rsuite'
+
+const data = ['Balangoda', 'Chilaw', 'Gale']
 
 function SearchBar() {
   return (
@@ -10,37 +15,35 @@ function SearchBar() {
       <div className={styles.searchBox}>
         <div className={styles.block}>
           <div className={styles.blockLabel}>Location</div>
-          <div className={styles.input}>
-            <input />
-          </div>
+          <AutoComplete data={data} size="lg" />
         </div>
 
         <div className={styles.block}>
-          <div className={styles.blockLabel}>Check in</div>
-          <div className={styles.input}>
-            <input />
-          </div>
-        </div>
-        <div className={styles.block}>
-          <div className={styles.blockLabel}>Check out</div>
-          <div className={styles.input}>
-            <input />
-          </div>
+          <div className={styles.blockLabel}>Check in - check out</div>
+          <DateRangePicker
+            size="lg"
+            placeholder="Select check in and out dates"
+          />
         </div>
 
         <div className={styles.block}>
-          <div className={styles.blockLabel}>Guests</div>
-          <div className={styles.input}>
-            <input />
-          </div>
+          <div className={styles.blockLabel}>No Adults</div>
+          <InputNumber size="lg" />
         </div>
-
+        <div className={styles.block}>
+          <div className={styles.blockLabel}>No Children</div>
+          <InputNumber size="lg" />
+        </div>
         <div>
           <Button
+            size="lg"
+            color="orange"
+            appearance="primary"
             onClick={() => console.log('here')}
-            type="primary"
             title="Search"
-          />
+          >
+            Search
+          </Button>
         </div>
       </div>
     </div>
